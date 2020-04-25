@@ -36,5 +36,6 @@ api.add_resource(ThingworxResultImg, '/hello')
 
 
 if __name__ == '__main__':
+    print("hello")
     app.run(host=host_addr,
             port=host_port)

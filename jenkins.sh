@@ -1,0 +1,1 @@
+docker run -v /var/run/docker.sock:/var/run/docker.sock -p 8200:8080 --name jenkins kwk1602/jenkins:v1
