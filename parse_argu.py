@@ -16,3 +16,4 @@ if options.mode == "develop":
 
 command_str = "python server.py -f " + server_yml_name
 os.system(command_str)
+
