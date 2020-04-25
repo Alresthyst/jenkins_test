@@ -9,12 +9,13 @@ parser.add_option("-m", "--mode", dest="server_mode", help="Setting server mode"
 
 server_yml_name = None
 
-if options.mode == "release":
+if options.server_mode == "release":
     server_yml_name = "release_config.yml"
-if options.mode == "develop":
+
+elif options.server_mode == "develop":
     server_yml_name = "develop_config.yml"
 
-os.system("Server mode: " + options.mode + " :)")
+os.system("Server mode: " + options.server_mode + " :)")
 command_str = "python server.py -f " + server_yml_name
 os.system(command_str)
 
