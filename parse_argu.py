@@ -16,6 +16,7 @@ elif options.server_mode == "develop":
     server_yml_name = "develop_config.yml"
 
 print("Server mode: " + options.server_mode + " ^^\n")
+os.system("pip3 install pyyaml")
 command_str = "python3 server.py -f " + server_yml_name
 os.system(command_str)
 
