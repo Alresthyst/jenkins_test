@@ -15,7 +15,7 @@ if options.server_mode == "release":
 elif options.server_mode == "develop":
     server_yml_name = "develop_config.yml"
 
-os.system("Server mode: " + options.server_mode + " :)")
+print("Server mode: " + options.server_mode + " :)\n")
 command_str = "python server.py -f " + server_yml_name
 os.system(command_str)
 
