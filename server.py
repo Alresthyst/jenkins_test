@@ -24,7 +24,7 @@ class ThingworxResultImg(Resource):
     def get():
         try:
 
-            return jsonify("hello I'm server :) ")
+            return jsonify("hello I'm " + config_content['name'] + " :)")
         except Exception as e:
             return {'error': str(e)}
 
