@@ -1,10 +1,22 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify
 from flask_restful import Resource
 from flask_restful import Api
+from optparse import OptionParser
+import sys
+import os
+import yaml
 
 
-host_addr = "0.0.0.0"
-host_port = 8080
+parser = OptionParser()
+parser.add_option("-f", "--file_name", dest="file_name", help="IP setting",
+                  default="release_config.yml")
+(options, args) = parser.parse_args(sys.argv)
+
+config_file_name = options.file_name
+config_content = yaml.full_load(open(os.path.join(os.getcwd(), config_file_name)))
+
+host_addr = config_content['host_address']
+host_port = config_content['host_port']
 
 
 class ThingworxResultImg(Resource):
