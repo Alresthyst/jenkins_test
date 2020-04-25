@@ -20,3 +20,5 @@ os.system("pip3 install pyyaml")
 command_str = "python3 server.py -f " + server_yml_name
 os.system(command_str)
 
+
+
